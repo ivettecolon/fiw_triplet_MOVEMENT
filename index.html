@@ -498,7 +498,20 @@
         prompt: "<p>Click and drag the images below to sort them so that the items <strong>similar in MOVEMENT</strong> are close together.</p>"
     };
       timeline.push(sort_trial);
-      
+
+   var see_circle = {
+        type: jsPsychSurveyMultiSelect,
+        questions: [
+          {prompt: "Could you see the videos in the previous task that asked you to place videos in a circle?", 
+            options: ["Yes - I could see videos without loading issues", 
+                      "Yes - I could see videos but there were loading issues",
+                      "No - I could not see any videos"], 
+            horizontal: false,
+            required: true,
+            name: 'see_circle'}]
+    };
+    timeline.push(see_circle); 
+    
 
     // survey time
     var demographic_instructions = {
